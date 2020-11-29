@@ -1,0 +1,18 @@
+<launch>
+	<!-- lidar drivers -->
+	<node name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
+		<param name="serial_port" type="string" value="/dev/ttyUSB1" />
+		<param name="serial_baudrate" type="int" value="256000" />
+		<!-- A3 -->
+		<param name="frame_id" type="string" value="laser" />
+		<param name="inverted" type="bool" value="false" />
+		<param name="angle_compensate" type="bool" value="true" />
+		<param name="scan_mode" type="string" value="Sensitivity" />
+	</node>
+	<!-- obstacle_detection -->
+	<node name="obstacle_detection" pkg="obstacle_detection" type="obstacle_detection.py" output="screen" />
+	<!-- servo control in host computer -->
+	<node name="servo_node" pkg="control" type="servo_node.py" output="screen" launch-prefix="xterm -e" />
+	<!-- serial communication for control in lower computer -->
+	<node name="serial_port" pkg="bluetooth_bridge" type="serial_port_server_node.py" />
+</launch>

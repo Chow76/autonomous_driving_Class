@@ -1,0 +1,8 @@
+<launch>
+  <node name="bluetooth_bridge" pkg="bluetooth_bridge" type="bluetooth_bridge_server_node.py" output="screen">
+  </node>
+  <node name="serial_port" pkg="bluetooth_bridge" type="serial_port_server_node.py" output="screen">
+  </node>
+  <node name="sound_server_node" pkg="bluetooth_bridge" type="sound_server_node.py" output="screen">
+  </node>
+</launch>

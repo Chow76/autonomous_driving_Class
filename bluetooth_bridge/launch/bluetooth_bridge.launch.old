@@ -1,0 +1,16 @@
+<launch>
+  <arg name="node_name" default="bluetooth_bridge"         />
+
+  <arg name="rfcomm_channel" default="1"                   />
+
+  <arg name="send_topic"     default="/bluetooth/send"     />
+  <arg name="recv_topic"     default="/bluetooth/received" />
+  <arg name="status_topic"   default="/bluetooth/status"   />
+
+  <node name="$(arg node_name)" pkg="bluetooth_bridge" type="bluetooth_bridge_server_node_verson1.py" output="screen" >
+    <param name="rfcomm_channel" value="$(arg rfcomm_channel)" />
+    <param name="send_topic"     value="$(arg send_topic)"     />
+    <param name="recv_topic"     value="$(arg recv_topic)"     />
+    <param name="status_topic"   value="$(arg status_topic)"   />
+  </node>
+</launch>

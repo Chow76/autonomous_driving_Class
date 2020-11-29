@@ -1,0 +1,10 @@
+<launch>
+	
+  <!-- lane_detection -->
+  <node name="lane_detection" pkg="lane_detection" type="lane_detection.py" output="screen" />
+  <!-- servo control in host computer -->
+  <node name="servo_node" pkg="control" type="servo_node.py" output="screen" launch-prefix = "xterm -e"/>
+  <!-- serial communication for control in lower computer-->
+	<node name="serial_port" pkg="bluetooth_bridge" type="serial_port_server_node.py" />
+
+</launch>
