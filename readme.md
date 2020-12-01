@@ -72,9 +72,9 @@ $ sudo chmod +x ./src/control/scripts/servo_node.py
 $ sudo chmod +x ./src/bluetooth_bridge/scripts/serial_port_serve_node.py
 
 # 测试巡线代码
-$ roslaunch lane_detection lane_detection.launch
+$ roslaunch lane_detection lane_test.launch
 # 测试停障代码
-$ roslaunch obstacle_detection obstacle_detection.launch
+$ roslaunch obstacle_detection obstacle_test.launch
 ```
 
 **重要：** 示例代码中的巡线算法和停障算法只是从传感器获取数据到车辆控制的流程示例，效果可能不够理想。建议自行选择算法处理传感器数据实现功能。
