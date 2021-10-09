@@ -82,3 +82,4 @@ $ roslaunch obstacle_detection obstacle_test.launch
 ## 4. 备注
 
 如有疑问请联系助教，祝大家有所收获！
+助教邮箱：chow76@sjtu.edu.cn
