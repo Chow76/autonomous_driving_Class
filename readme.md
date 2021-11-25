@@ -60,7 +60,7 @@ $ git pull origin master
 ``` bash
 $ cd ~
 # 下载代码
-$ git clone https://github.com/ShaotengWu/huaweicar_ws.git
+$ git clone https://github.com/Chow76/autonomous_driving_Class.git
 $ cd huaweicar_ws
 # 编译
 $ catkin_make
